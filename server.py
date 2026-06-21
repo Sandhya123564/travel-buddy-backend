@@ -904,3 +904,13 @@ async def create_default_admin():
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
+import os
+import uvicorn
+
+if _name_ == "_main_":
+    uvicorn.run(
+        "server:app",
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 8000)),
+        reload=False
+    )
