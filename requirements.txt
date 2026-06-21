@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+motor
+requests
+python-dotenv
+bcrypt
+pyjwt
+python-multipart
+email-validator
